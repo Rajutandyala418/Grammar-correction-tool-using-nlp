@@ -10,7 +10,7 @@ from io import BytesIO
 nlp = spacy.load("en_core_web_sm")
 
 # Initialize OpenAI client
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="OPENAI_API_KEY")
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -140,4 +140,4 @@ def speech_output():
         return jsonify({"audio_base64": ""})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(debug = True)
